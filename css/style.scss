@@ -1,9 +1,12 @@
+$textcolor1: hsl(320, 100%, 17%);
 $color1: hsl(320, 100%, 77%);
 $color2: hsl(320, 100%, 83%);
+$color2-tr: hsla(320, 100%, 83%, 0.6);
 $color3: hsl(320, 100%, 87%);
 $color3-tr: hsla(320, 100%, 87%, 0.4);
 $color4: hsl(320, 100%, 93%);
 $color5: hsl(320, 100%, 97%);
+$textcolor1alt: hsl(60, 100%, 17%);
 $color1alt: hsl(60, 100%, 77%);
 $color2alt: hsl(60, 100%, 83%);
 $color3alt: hsl(60, 100%, 87%);
@@ -11,22 +14,33 @@ $color3alt-tr: hsla(60, 100%, 87%, 0.4);
 $color4alt: hsl(60, 100%, 93%);
 $color5alt: hsl(60, 100%, 97%);
 $game-scaling: 0.75;
-$chat-scaling: 0.60;
+$chat-scaling: 0.50;
 
 body {
-    background-image: url(https://f.lucy.moe/74078288_p0.png);
-    background-size: cover;
+    width: 1920px;
+    height: 1080px;
+    background-image: linear-gradient(140deg, $color3alt-tr 30%, $color2-tr 50%), url(http://192.168.188.21:8009/74078288_p0.png);
+    background-size: 1920px 1080px;
     background-position: top;
+    margin: 0px;
     font-family: FreeSerif;
-    color: black;
+    color: $textcolor1;
+    background-color: $color3;
+}
+
+.top {
+    margin: 0px;
     display: flex;
 }
 
 .game {
-    margin: 10px;
+    margin: 10px 5px 10px 10px;
     height: 1080px * $game-scaling;
     width: 1920px * $game-scaling;
-    background-color: $color3-tr;
+    background-color: transparent;
+    background-image: url(http://192.168.188.21:8009/74078288_p0.png);
+    background-size: 1920px 1080px;
+    background-position: -16px -16px;
     border: 6px solid; 
     border-color: $color1alt $color1 $color1 $color1alt;
     border-radius: 3px;
@@ -36,7 +50,7 @@ body {
 }
 
 .chat {
-    margin: 10px;
+    margin: 10px 10px 10px 5px;
     width: auto;
     height: 1080px * $chat-scaling;
     background-color: $color3alt-tr;
@@ -47,4 +61,47 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.osu-icon {
+    margin: 24px;
+    height: 180px;
+}
+
+.bottom {
+    margin: 5px 10px 10px 10px;
+    width: 1452px * 0.8;
+    height: 1080px - 862px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.viewcount {
+    border: 0px;
+    width: 180px;
+}
+
+.osu-add {
+    width: 300px;
+    margin: 24px;
+    flex-grow: 3;
+    color: $color5;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#now-playing {
+    font-size: 34px;
+    font-style: italic;
+}
+
+.handcam {
+    margin: 10px 10px 10px 5px;
+    height: 100%;
+    width: 300px;
+    background-color: $color3alt-tr;
+    border: 6px solid; 
+    border-color: $color1alt $color1 $color1 $color1alt;
+    border-radius: 3px;
 }

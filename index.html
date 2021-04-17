@@ -7,11 +7,25 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class=game>
-        Game
+    <div class=top>
+        <div class=game>
+            <h1>Game</h1>
+        </div>
+        <iframe class=chat src="http://192.168.188.21:8007/chat" title="Chat">
+        </iframe>
     </div>
-    <div class=chat>
-        Chat
+    <div class=bottom>
+        <img class=osu-icon src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Osu%21Logo_%282015%29.png" alt="Osu Icon">
+        <div class=twitch-stats>
+            <iframe class=viewcount src="http://192.168.188.21:8007/viewcount" title="Viewcount">
+            </iframe>
+        </div>
+        <div class=osu-add>
+            <p>NP: <span id=now-playing>[comming soon]</span> </p>
+        </div>
+        <!--div class=handcam>
+        </div-->
+    
     </div>
 
 </body>
