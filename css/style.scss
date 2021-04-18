@@ -1,25 +1,12 @@
-$textcolor1: hsl(320, 100%, 17%);
-$color1: hsl(320, 100%, 77%);
-$color2: hsl(320, 100%, 83%);
-$color2-tr: hsla(320, 100%, 83%, 0.6);
-$color3: hsl(320, 100%, 87%);
-$color3-tr: hsla(320, 100%, 87%, 0.4);
-$color4: hsl(320, 100%, 93%);
-$color5: hsl(320, 100%, 97%);
-$textcolor1alt: hsl(60, 100%, 17%);
-$color1alt: hsl(60, 100%, 77%);
-$color2alt: hsl(60, 100%, 83%);
-$color3alt: hsl(60, 100%, 87%);
-$color3alt-tr: hsla(60, 100%, 87%, 0.4);
-$color4alt: hsl(60, 100%, 93%);
-$color5alt: hsl(60, 100%, 97%);
+@import 'colors.scss';
+
 $game-scaling: 0.75;
 $chat-scaling: 0.50;
 
 body {
     width: 1920px;
     height: 1080px;
-    background-image: linear-gradient(140deg, $color3alt-tr 30%, $color2-tr 50%), url(http://192.168.188.21:8009/74078288_p0.png);
+    background-image: linear-gradient(140deg, $color3alt-tr 30%, $color2-tr 70%), url(http://192.168.188.21:8009/74078288_p0.png);
     background-size: 1920px 1080px;
     background-position: top;
     margin: 0px;
@@ -80,15 +67,26 @@ body {
 .viewcount {
     border: 0px;
     width: 180px;
+    height: 40px;
 }
 
-.osu-add {
-    width: 300px;
-    margin: 24px;
-    flex-grow: 3;
+p {
     color: $color5;
     font-size: 40px;
     font-weight: bold;
+}
+
+.osu-add {
+    @extends p;
+    width: 300px;
+    margin: 24px;
+    flex-grow: 2;
+}
+
+.twitch-stats {
+    margin: 24px;
+    display: flex;
+    flex-direction: column;
 }
 
 #now-playing {
