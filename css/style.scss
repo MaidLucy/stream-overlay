@@ -50,9 +50,17 @@ body {
     justify-content: center;
 }
 
-.osu-icon {
-    margin: 24px;
+.currently-playing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
     height: 180px;
+    img {
+        height: 70%;
+        margin: 14px;
+    }
 }
 
 .bottom {
@@ -66,14 +74,29 @@ body {
 
 .viewcount {
     border: 0px;
+    margin: 0px;
     width: 180px;
     height: 40px;
 }
 
 p {
+    background-color: $color3-tr;
+    border: 3px solid; 
+    border-color: $color1alt $color1 $color1 $color1alt;
+    border-radius: 3px;
+    margin: 0px 0px 10px 0px;
+    padding: 4px;
     color: $color5;
     font-size: 40px;
     font-weight: bold;
+}
+
+.label {
+    color: $color5;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    /**border-bottom: 3px solid $color5;**/
 }
 
 .osu-add {
